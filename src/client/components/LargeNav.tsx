@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Nav, LargeNav } from "../../styleslibrary";
 import useTheme from "../hooks/useTheme";
-
+import { NavButton } from "../../styleslibrary";
 const LargeScreenNav = () => {
-  const [theme, toggleTheme] = useTheme();
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [theme, toggleDarkTheme, toggleRedTheme, togglePurpleTheme, toggleBlueTheme] = useTheme();
 
+    useEffect(() => {
+        setHasLoaded(true);
+    }, [])
   return (
     <Nav>
-      <LargeNav>
-        <button>Yo</button>
-        <button>Click</button>
-        <button>Me</button>
-        <button>Please</button>
-        <button onClick = {toggleTheme}>Theme</button>
-      </LargeNav>
+      {hasLoaded && <LargeNav>
+        <NavButton onClick={toggleDarkTheme}>Dark/Light</NavButton>
+        <NavButton bgHover="red" onClick={toggleRedTheme}>Red</NavButton>
+        <NavButton bgHover="#5000c1" onClick={togglePurpleTheme}>Purple</NavButton>
+        <NavButton bgHover="#0214de" onClick={toggleBlueTheme}>Blue</NavButton>
+      </LargeNav>}
     </Nav>
   );
 };
