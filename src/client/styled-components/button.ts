@@ -4,10 +4,10 @@ export const NavButton = styled.button<ButtonProps>`
   background-color: var(--bg);
   color: var(--text);
   padding: ${(props) => props.pad || "5"}px;
-  padding-left: ${(props) => props.padL || "40"}px;
-  padding-right: ${(props) => props.padR || "40"}px;
-  padding-top: ${(props) => props.padT || "20"}px;
-  padding-bottom: ${(props) => props.padB || "20"}px;
+  padding-left: ${(props) => props.padL || "5"}px;
+  padding-right: ${(props) => props.padR || "5"}px;
+  padding-top: ${(props) => props.padT || "10"}px;
+  padding-bottom: ${(props) => props.padB || "10"}px;
   margin: ${(props) => props.mar || "5"}px;
   margin-left: ${(props) => props.marL || "0"}px;
   margin-right: ${(props) => props.marR || "0"}px;

@@ -1,10 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Nav = styled.div`
   display: flex;
   flex-flow: column nowrap;
+  justify-content: flex-end;
 `;
-
+export const ColorNav = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
 export const LargeNav = styled.nav<NavProps>`
   display: flex;
   flex-flow: row nowrap;
@@ -59,5 +64,5 @@ export const LargeNav = styled.nav<NavProps>`
 `;
 
 interface NavProps {
-    isScrolled?: boolean;
+  isScrolled?: boolean;
 }
