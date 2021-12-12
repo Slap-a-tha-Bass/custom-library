@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 import Test from "./views/Test";
-// import LargeScreenNav from './components/NavBar/LargeScreenNav.jsx';
+import LargeNav from './components/LargeNav';
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
@@ -42,7 +42,7 @@ const App = (props: AppProps) => {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      {/* <LargeScreenNav /> */}
+      <LargeNav />
       <Routes>
         <Route element={<Test />} path="/" />
         <Route index element={<Test />} />
